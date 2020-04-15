@@ -9,11 +9,11 @@ while(isset($open)){
         for($i=1; $i<=12; $i++){
             calendar($i, $year);
         }
-    } else if (strpos($input, ' ') !== false){
+    } else if (strpos($input, ' ') !== false && strlen($input) <= 7){
         $year = substr($input, 4);
         $month = substr($input, 0, 2);
         calendar($month, $year);
-    } else if (strpos($input, '-') !== false) {
+    } else if (strpos($input, '-') !== false && strlen($input) <= 7) {
         $month = substr($input, 5);
         $year = substr($input, 0, 4);
         calendar($month, $year);
